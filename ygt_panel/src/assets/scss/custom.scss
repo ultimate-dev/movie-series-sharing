@@ -1,0 +1,36 @@
+.ant-message {
+  .ant-message-custom-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: 0;
+  }
+  .anticon {
+    font-size: 18px;
+  }
+  span:not(.anticon) {
+    margin-bottom: -2px;
+  }
+}
+.btn {
+  font-size: 14px;
+  height: 36px;
+  padding: 0px 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.btn-gray {
+  background-color: #f5f5f5 !important;
+  border-color: #eee !important;
+  color: #252525;
+}
+
+.btn-sm {
+  height: 28px;
+  padding: 0 7px;
+  font-size: 12px;
+}

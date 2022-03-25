@@ -1,0 +1,228 @@
+//Components
+.card {
+  background-color: transparent;
+  border: none;
+  &.card + &.card {
+    margin-top: 20px;
+  }
+  .card-header {
+    background-color: transparent;
+    border-bottom: none;
+    text-transform: uppercase;
+    margin-top: -10px;
+    font-weight: 500;
+    font-size: 12px;
+    color: $gray;
+  }
+  .card-body {
+    background-color: $card;
+    box-shadow: $shadow;
+    padding: 25px;
+    border-radius: $rounded;
+  }
+}
+
+.badge {
+  padding: 4px 7px;
+  font-weight: 500;
+  border-radius: $rounded;
+}
+
+.btn {
+  height: 40px;
+  font-size: 14px;
+  border: none;
+  font-weight: 500;
+  border-radius: $rounded;
+  line-height: 1;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  //Buttons
+  @each $name, $value in $colors {
+    &.btn-soft-#{$name} {
+      background-color: lighten($value, 36%);
+      color: $value;
+    }
+  }
+  @each $name, $value in $colors {
+    &.btn-#{$name} {
+      background-color: $value;
+    }
+  }
+}
+
+.alert {
+ 
+  //Buttons
+  @each $name, $value in $colors {
+    &.alert-#{$name} {
+      background-color: lighten($value, 36%)!important;
+      color: $value;
+      border-color: lighten($value, 30%)!important;
+    }
+  }
+}
+
+@each $name, $value in $colors {
+  &.text-#{$name} {
+    color: $value !important;
+  }
+}
+
+@each $name, $value in $colors {
+  &.bg-#{$name} {
+    background-color: $value !important;
+  }
+}
+
+@each $name, $value in $colors {
+  &.border-#{$name} {
+    border-color: $value !important;
+  }
+}
+
+@each $name, $value in $weights {
+  &.fw-#{$name} {
+    font-weight: $value !important;
+  }
+}
+
+.form-control {
+  height: 40px;
+  font-size: 14px;
+  border: 1px solid $default;
+  border-radius: $rounded;
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: rgba($primary, 0.3);
+    box-shadow: 0 0 0 3px rgba($primary, 0.3);
+  }
+}
+
+.avatar {
+  border-radius: $rounded;
+  background-color: $gray;
+}
+
+//Utiliates
+.rounded {
+  border-radius: $rounded !important;
+}
+
+.shadow {
+  box-shadow: $shadow !important;
+}
+
+[data-aos="fade-up"] {
+  transform: translate3d(0, 30px, 0);
+}
+
+
+//@at-root
+
+//Image Picker
+.app-image-picker {
+  position: relative;
+  width: 100%;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 6px;
+  .app-image-picker-clear {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background-color: #f5f5f5;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    &:hover {
+      color: red;
+    }
+    * {
+      font-size: 18px;
+    }
+  }
+  .app-image-picker-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+  }
+  .app-image-picker-label {
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    display: block;
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    &:hover {
+      transform: scale(0.96);
+      .app-image-picker-label-icon {
+        color: #555555;
+      }
+    }
+    .app-image-picker-label-icon {
+      color: #999999;
+      font-size: 30px;
+    }
+    .app-image-picker-label-input {
+      position: absolute;
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  &.app-image-picker-transparent {
+    background-color: transparent;
+    .app-image-picker-label {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+}
+
+.app-locale-select {
+  .ant-select-selector {
+    background-color: transparent !important;
+    border: none !important;
+  }
+}
+
+.text-decoration-line {
+  text-decoration: line-through;
+}
+
+.app-tag {
+  border: none !important;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 6px 10px;
+  height: auto !important;
+  border-radius: 4px;
+  box-shadow: none;
+  line-height: 1;
+  text-transform: uppercase;
+}

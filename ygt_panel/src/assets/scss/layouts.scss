@@ -1,0 +1,51 @@
+.wrapper {
+  overflow-x: hidden;
+}
+.nav-collapse {
+  margin-bottom: 0px !important;
+}
+
+.app-theme-switch {
+  width: 100%;
+  .app-theme-switch-modes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    .app-theme-switch-mode {
+      position: relative;
+      width: 33.33%;
+      height: 60px;
+      padding: 6px;
+      .app-theme-switch-body {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        &:hover,
+        .selected {
+          box-shadow: 0 0 0 3px #37a1f6;
+        }
+        .app-theme-switch-top {
+          position: relative;
+          width: 100%;
+          height: 8px;
+          box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.08);
+          z-index: 2;
+        }
+        .app-theme-switch-left {
+          position: relative;
+          width: 28%;
+          height: 100%;
+          z-index: 1;
+          box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.08);
+        }
+      }
+    }
+  }
+}
